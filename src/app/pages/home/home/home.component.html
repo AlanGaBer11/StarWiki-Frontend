@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+
+<div class="container" part="scroll">
+  <div class="serach-box">
+    <mat-form-field>
+      <mat-label> <mat-icon>search</mat-icon>Buscar en la Wiki...</mat-label>
+      <input matInput type="search" placeholder="Buscar" />
+    </mat-form-field>
+    <button class="search-btn">Buscar</button>
+  </div>
+  <br />
+  <br />
+  <h1>Bienvenido a nuestra Wiki!!</h1>
+
+  <br />
+  <br />
+
+  <div class="card-container">
+    <div
+      class="card"
+      *ngFor="let card of cards"
+      [ngClass]="card.class"
+      [routerLink]="card.link"
+    >
+      <div class="card-content">{{ card.titulo }}</div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <div class="articulo-container">
+    <div class="articulo-texto">
+      <h2>Artículo Destacado</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus
+        vulputate metus, placerat vulputate erat sagittis nec. In nec nisi nibh.
+        Sed vel fringilla mauris. Maecenas pharetra sem ut ante dapibus, in
+        gravida lacus blandit. Mauris ornare magna molestie ipsum finibus, non
+        auctor purus mollis. Ut feugiat, nisl at dapibus molestie, nulla ex
+        volutpat tortor, in dignissim massa nunc efficitur dolor. Proin
+        tristique nisi erat, id sagittis magna blandit ut. Phasellus nec ante
+        posuere, consequat eros laoreet, malesuada dui.
+      </p>
+      
+      <button class="featured-button">Lee el artículo destacado</button>
+    </div>
+    <div class="articulo-imagen">
+      <img
+        src="https://ionicframework.com/docs/img/demos/card-media.png"
+        alt="Artículo destacado"
+      />
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <app-footer></app-footer>
+</div>

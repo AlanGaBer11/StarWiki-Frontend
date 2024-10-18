@@ -1,0 +1,65 @@
+.container {
+    position: absolute;
+    top: 10%;
+    margin: 30px 30px 30px;
+    padding: 10px 10px none;
+    z-index: 998;
+  }
+  
+  h1 {
+    margin: 0 15px;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  p {
+    margin: 0 15px 20px;
+    padding: 15px;
+    text-align: center;
+  }
+  .texto{
+      text-align: center;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    gap: 150px;
+  
+    .content {
+      border: 1px solid #000;
+      width: 20%;
+      height: auto;
+      /* margin-left: 40px; */
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+      }
+  
+      button {
+        padding: 10px 20px;
+        font-family: Poppins;
+        background-color: #bec9c2;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #98e4ff;
+        }
+      }
+    }
+  }
+  

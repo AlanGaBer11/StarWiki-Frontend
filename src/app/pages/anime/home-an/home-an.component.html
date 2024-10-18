@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1>Anime</h1>
+  <br />
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, est
+    ducimus, recusandae a quos deserunt rem saepe, at iste ex quas error
+    voluptate animi? Aperiam neque incidunt laboriosam! Nihil, voluptatum. Ipsa
+    sapiente dolore et non placeat, vero odio dolorum quod nesciunt cum
+    voluptate dicta tenetur eligendi sint eos blanditiis ea impedit esse minus
+    culpa omnis aliquid expedita alias hic. Voluptates.
+  </p>
+  <br />
+  <br />
+  <br />
+
+  <div class="cards-container">
+    <div class="content" *ngFor="let a of anime">
+      <img [src]="a.imagen" alt="a.nombre" />
+      <button [routerLink]="a.link">
+        Sumérgete en el mundo de {{ a.nombre }}
+      </button>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <app-footer></app-footer>
+</div>
