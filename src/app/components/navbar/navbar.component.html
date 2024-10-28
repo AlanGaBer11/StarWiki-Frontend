@@ -2,7 +2,7 @@
   <img routerLink="/inicio" src="assets/img/logo2.png" />
   <h1 routerLink="/inicio">StarWiki</h1>
   <ul class="links">
-    <li><a href="/inicio" class="titulo">Inicio</a></li>
+    <li><a routerLink="/inicio" class="titulo">Inicio</a></li>
     <li>
       <a class="titulo"
         >Star Wars
@@ -13,7 +13,7 @@
         ></mat-icon>
       </a>
       <ul>
-        <li class="sub"><a class="titulo" href="/cronologia">Cronología</a></li>
+        <li class="sub"><a class="titulo" routerLink="/cronologia">Cronología</a></li>
         <li class="sub">
           <a class="titulo"
             >Trilogías
@@ -25,64 +25,13 @@
           </a>
           <ul>
             <li>
-              <a class="titulo"
-                >Trilogía de Precuelas<mat-icon
-                  aria-hidden="false"
-                  fontIcon="arrow_drop_down"
-                  class="icon"
-                ></mat-icon
-              ></a>
-              <ul>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_I">Episodio I</a>
-                </li>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_II">Episodio II</a>
-                </li>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_III">Episodio III</a>
-                </li>
-              </ul>
+              <a class="titulo" routerLink="/trilogia_precuelas">Trilogía de Precuelas</a>
             </li>
             <li>
-              <a class="titulo"
-                >Trilogía Original<mat-icon
-                  aria-hidden="false"
-                  fontIcon="arrow_drop_down"
-                  class="icon"
-                ></mat-icon
-              ></a>
-              <ul>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_IV">Episodio IV</a>
-                </li>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_V">Episodio V</a>
-                </li>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_VI">Episodio VI</a>
-                </li>
-              </ul>
+              <a class="titulo" routerLink="/trilogia_original">Trilogía Original</a>
             </li>
             <li class="sub">
-              <a class="titulo"
-                >Trilogía de Secuelas<mat-icon
-                  aria-hidden="false"
-                  fontIcon="arrow_drop_down"
-                  class="icon"
-                ></mat-icon
-              ></a>
-              <ul>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_VII">Episodio VII</a>
-                </li>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_VIII">Episodio VIII</a>
-                </li>
-                <li class="sub">
-                  <a class="titulo" href="/episodio_IX">Episodio IX</a>
-                </li>
-              </ul>
+              <a class="titulo" routerLink="/trilogia_secuelas">Trilogía de Secuelas</a>
             </li>
           </ul>
         </li>
@@ -99,11 +48,11 @@
         ></mat-icon>
       </a>
       <ul>
-        <li class="sub"><a class="titulo" href="/xbox">Xbox</a></li>
+        <li class="sub"><a class="titulo" routerLink="/xbox">Xbox</a></li>
         <li class="sub">
-          <a class="titulo" href="/play_station">PlayStation</a>
+          <a class="titulo" routerLink="/play_station">PlayStation</a>
         </li>
-        <li class="sub"><a class="titulo" href="/nintendo">Nintendo</a></li>
+        <li class="sub"><a class="titulo" routerLink="/nintendo">Nintendo</a></li>
       </ul>
     </li>
 
@@ -118,12 +67,12 @@
       </a>
       <ul>
         <li class="sub">
-          <a class="titulo" href="/dragon_ball">Dragon Ball</a>
+          <a class="titulo" routerLink="/dragon_ball">Dragon Ball</a>
         </li>
-        <li class="sub"><a class="titulo" href="/one_piece">One Piece</a></li>
+        <li class="sub"><a class="titulo" routerLink="/one_piece">One Piece</a></li>
       </ul>
     </li>
 
-    <li><a class="titulo" href="#comunidad">Comunidad </a></li>
+    <li><a class="titulo" routerLink="/comunidad">Comunidad</a></li>
   </ul>
 </nav>

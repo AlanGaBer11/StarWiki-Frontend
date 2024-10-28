@@ -1,5 +1,5 @@
 nav {
-    background-color: #EEFBF3;
+    background-color: #FFFFFF;
     position: sticky;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@ nav {
   }
   
   .links li a {
-    background-color: #EEFBF3;
+    background-color: #FFFFFF;
     color: #000000;
     text-decoration: none;
     padding: 10px 10px;
@@ -61,7 +61,7 @@ nav {
   }
   
   .links .sub a:hover {
-    background-color: #98E4FF;
+    background-color: var(--color-secondary);
   }
   
   .links li ul {

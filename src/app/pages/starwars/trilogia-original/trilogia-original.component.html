@@ -1,0 +1,195 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1 class="title">Trilogía Original</h1>
+  <br />
+  <br />
+
+  <div class="tabs">
+    <div class="tabs-list">
+      <button class="tabs-trigger active" data-tab="episodioIV" (click)="showEpisodioIV()">
+        Episodio IV - Una Nueva Esperanza
+      </button>
+      <button class="tabs-trigger" data-tab="episodioV" (click)="showEpisodioV()">
+        Episodio V - El Imperio Contraataca
+      </button>
+      <button class="tabs-trigger" data-tab="episodioVI" (click)="showEpisodioVI()">
+        Episodio VI - El Regreso del Jedi
+      </button>
+    </div>
+    <br />
+    
+
+    <!-- EPISODIO IV -->
+    <div class="tabs-content active" id="episodioIV">
+      <div class="grid">
+        <div>
+          <img src="assets/img/st-episodios/4.webp" alt="Episodio IV - Una Nueva Esperanza" class="poster" />
+        </div>
+        <div>
+          <h2 class="subtitle">Sinopsis</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+          </p>
+          <div class="badges">
+            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
+            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linea del Tiempo -->
+      <h2 class="subtitle">Secuelas</h2>
+      <div class="scroll-area">
+        <ol class="timeline">
+          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+            <div class="dot"></div>
+            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
+            <p class="timeline-text">{{ lt.descripcion }}</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Personajes Principales -->
+      <h2 class="subtitle">Personajes Principales</h2>
+      <div class="characters-grid">
+        <div class="character-card">
+          <div class="avatar">
+            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+          </div>
+          <h3 class="character-name">Personaje 01</h3>
+          <p class="character-role">Astrophysicist</p>
+          <p class="character-description">
+            Brilliant and determined, Dr. Voss leads the mission to save the universe.
+          </p>
+        </div>
+
+        <div class="character-card">
+          <div class="avatar">
+            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
+          </div>
+          <h3 class="character-name">Personaje 02</h3>
+          <p class="character-role">Astrophysicist</p>
+          <p class="character-description">
+            Brilliant and determined, Dr. Voss leads the mission to save the universe.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EPISODIO V -->
+    <div class="tabs-content" id="episodioV">
+      <div class="grid">
+        <div>
+          <img src="assets/img/st-episodios/5.webp" alt="Episodio V - El Imperio Contraataca" class="poster" />
+        </div>
+        <div>
+          <h2 class="subtitle">Sinopsis</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+          </p>
+          <div class="badges">
+            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
+            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linea del Tiempo -->
+      <h2 class="subtitle">Secuelas</h2>
+      <div class="scroll-area">
+        <ol class="timeline">
+          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+            <div class="dot"></div>
+            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
+            <p class="timeline-text">{{ lt.descripcion }}</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Personajes Principales -->
+      <h2 class="subtitle">Personajes Principales</h2>
+      <div class="characters-grid">
+        <div class="character-card">
+          <div class="avatar">
+            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+          </div>
+          <h3 class="character-name">Personaje 03</h3>
+          <p class="character-role">Astrophysicist</p>
+          <p class="character-description">
+            Brilliant and determined, Dr. Voss leads the mission to save the universe.
+          </p>
+        </div>
+
+        <div class="character-card">
+          <div class="avatar">
+            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
+          </div>
+          <h3 class="character-name">Personaje 04</h3>
+          <p class="character-role">Astrophysicist</p>
+          <p class="character-description">
+            Brilliant and determined, Dr. Voss leads the mission to save the universe.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EPISODIO VI -->
+    <div class="tabs-content" id="episodioVI">
+      <div class="grid">
+        <div>
+          <img src="assets/img/st-episodios/6.webp" alt="Episodio VI - El Regreso del Jedi" class="poster" />
+        </div>
+        <div>
+          <h2 class="subtitle">Sinopsis</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+          </p>
+          <div class="badges">
+            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
+            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linea del Tiempo -->
+      <h2 class="subtitle">Secuelas</h2>
+      <div class="scroll-area">
+        <ol class="timeline">
+          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+            <div class="dot"></div>
+            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
+            <p class="timeline-text">{{ lt.descripcion }}</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Personajes Principales -->
+      <h2 class="subtitle">Personajes Principales</h2>
+      <div class="characters-grid">
+        <div class="character-card">
+          <div class="avatar">
+            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+          </div>
+          <h3 class="character-name">Personaje 05</h3>
+          <p class="character-role">Astrophysicist</p>
+          <p class="character-description">
+            Brilliant and determined, Dr. Voss leads the mission to save the universe.
+          </p>
+        </div>
+
+        <div class="character-card">
+          <div class="avatar">
+            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
+          </div>
+          <h3 class="character-name">Personaje 06</h3>
+          <p class="character-role">Astrophysicist</p>
+          <p class="character-description">
+            Brilliant and determined, Dr. Voss leads the mission to save the universe.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <app-footer></app-footer>
+</div>

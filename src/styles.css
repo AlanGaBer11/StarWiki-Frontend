@@ -38,7 +38,7 @@
 html,
 body {
   height: 100%;
-  background: #eefbf3;
+  background: #FFFFFF;
   scroll-behavior: smooth;
   font-family: Poppins;
 
@@ -76,4 +76,10 @@ body {
     padding: 10px 10px none;
     z-index: 998;
   }
+}
+
+:root {
+  --color-primary: #094753;
+  --color-secondary: #7F999D;
+  --color-tertiary: #EAEBED;
 }

@@ -3,14 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home/home.component';
 /* STAR WARS */
 import { HomeSTComponent } from './pages/starwars/home-st/home-st.component';
-import { EpisodioIComponent } from './pages/starwars/tPrecuelas/episodio-i/episodio-i.component';
-import { EpisodioIiComponent } from './pages/starwars/tPrecuelas/episodio-ii/episodio-ii.component';
-import { EpisodioIIIComponent } from './pages/starwars/tPrecuelas/episodio-iii/episodio-iii.component';
-import { EpisodioIvComponent } from './pages/starwars/tOriginal/episodio-iv/episodio-iv.component';
-import { EpisodioVComponent } from './pages/starwars/tOriginal/episodio-v/episodio-v.component';
-import { EpisodioViComponent } from './pages/starwars/tOriginal/episodio-vi/episodio-vi.component';
-import { EpisodioViiiComponent } from './pages/starwars/tSecuelas/episodio-viii/episodio-viii.component';
-import { EpisodioIxComponent } from './pages/starwars/tSecuelas/episodio-ix/episodio-ix.component';
+import { TrilogiaPrecuelasComponent } from './pages/starwars/trilogia-precuelas/trilogia-precuelas.component';
+import { TrilogiaOriginalComponent } from './pages/starwars/trilogia-original/trilogia-original.component';
+import { TrilogiaSecuelasComponent } from './pages/starwars/trilogia-secuelas/trilogia-secuelas.component';
 /* VIDEOJUEGOS */
 import { HomeVDComponent } from './pages/videojuegos/home-vd/home-vd.component';
 import { XboxComponent } from './pages/videojuegos/xbox/xbox.component';
@@ -27,15 +22,9 @@ const routes: Routes = [
 
   /* STAR WARS */
   { path: 'cronologia', component: HomeSTComponent },
-  { path: 'episodio_I', component: EpisodioIComponent },
-  { path: 'episodio_II', component: EpisodioIiComponent },
-  { path: 'episodio_III', component: EpisodioIIIComponent },
-  { path: 'episodio_IV', component: EpisodioIvComponent },
-  { path: 'episodio_V', component: EpisodioVComponent },
-  { path: 'episodio_VI', component: EpisodioViComponent },
-  { path: 'episodio_VII', component: EpisodioViComponent },
-  { path: 'episodio_VIII', component: EpisodioViiiComponent },
-  { path: 'episodio_IX', component: EpisodioIxComponent },
+  { path: 'trilogia_precuelas', component: TrilogiaPrecuelasComponent },
+  { path: 'trilogia_original', component: TrilogiaOriginalComponent },
+  { path: 'trilogia_secuelas', component: TrilogiaSecuelasComponent },
 
   /* VIDEOJUEGOS */
   { path: 'videojuegos', component: HomeVDComponent },

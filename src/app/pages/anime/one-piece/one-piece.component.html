@@ -27,16 +27,18 @@
   <!-- PERSONAJES -->
   <h2 class="subtitle">Personajes</h2>
   <div class="characters-grid">
-    <!--     <div class="character-card" *ngFor="let db of listDragonBall">
+    <div class="character-card" *ngFor="let op of listOnePiece">
       <div class="avatar">
-        <img [src]="db.image" [alt]="db.name" />
+        <img [src]="op.image" [alt]="op.name" />
       </div>
-      <h3 class="character-name">{{ db.name }}</h3>
-      <p class="character-role">{{ db.ki }}</p>
-      <p class="character-description">{{ db.description }}</p>
+      <h3 class="character-name">{{ op.name }}</h3>
+      <p class="character-role">{{ op.age }}</p>
+      <p class="character-role">{{ op.size }}</p>
+      <p class="character-role">{{ op.bounty }}</p>
+      <p class="character-description">{{ op.description }}</p>
     </div>
- -->
-    <div class="character-card">
+
+   <!--  <div class="character-card">
       <div class="avatar">
         <img
           src="https://ionicframework.com/docs/img/demos/card-media.png"
@@ -50,7 +52,7 @@
         universe.
       </p>
     </div>
-    
+     -->
   </div>
 
   <br />

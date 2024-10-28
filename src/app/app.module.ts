@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+
+import { FormsModule, FormGroup, ReactiveFormsModule  } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-import { EpisodioIComponent } from './pages/starwars/tPrecuelas/episodio-i/episodio-i.component';
+/* import { EpisodioIComponent } from './pages/starwars/tPrecuelas/episodio-i/episodio-i.component';
 import { EpisodioIiComponent } from './pages/starwars/tPrecuelas/episodio-ii/episodio-ii.component';
 import { EpisodioIIIComponent } from './pages/starwars/tPrecuelas/episodio-iii/episodio-iii.component';
 import { EpisodioIvComponent } from './pages/starwars/tOriginal/episodio-iv/episodio-iv.component';
@@ -18,7 +23,7 @@ import { EpisodioVComponent } from './pages/starwars/tOriginal/episodio-v/episod
 import { EpisodioViComponent } from './pages/starwars/tOriginal/episodio-vi/episodio-vi.component';
 import { EpisodioViiComponent } from './pages/starwars/tSecuelas/episodio-vii/episodio-vii.component';
 import { EpisodioViiiComponent } from './pages/starwars/tSecuelas/episodio-viii/episodio-viii.component';
-import { EpisodioIxComponent } from './pages/starwars/tSecuelas/episodio-ix/episodio-ix.component';
+import { EpisodioIxComponent } from './pages/starwars/tSecuelas/episodio-ix/episodio-ix.component'; */
 import { HomeSTComponent } from './pages/starwars/home-st/home-st.component';
 
 import { HomeComponent } from './pages/home/home/home.component';
@@ -32,13 +37,16 @@ import { OnePieceComponent } from './pages/anime/one-piece/one-piece.component';
 import { HomeANComponent } from './pages/anime/home-an/home-an.component';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { TrilogiaPrecuelasComponent } from './pages/starwars/trilogia-precuelas/trilogia-precuelas.component';
+import { TrilogiaSecuelasComponent } from './pages/starwars/trilogia-secuelas/trilogia-secuelas.component';
+import { TrilogiaOriginalComponent } from './pages/starwars/trilogia-original/trilogia-original.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    EpisodioIComponent,
+/*     EpisodioIComponent,
     EpisodioIiComponent,
     EpisodioIIIComponent,
     EpisodioIvComponent,
@@ -46,7 +54,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     EpisodioViComponent,
     EpisodioViiComponent,
     EpisodioViiiComponent,
-    EpisodioIxComponent,
+    EpisodioIxComponent, */
     HomeSTComponent,
     HomeComponent,
     XboxComponent,
@@ -55,7 +63,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     HomeVDComponent,
     DragonBallComponent,
     OnePieceComponent,
-    HomeANComponent
+    HomeANComponent,
+    TrilogiaPrecuelasComponent,
+    TrilogiaSecuelasComponent,
+    TrilogiaOriginalComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +75,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [
     provideAnimationsAsync()
