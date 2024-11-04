@@ -1,0 +1,83 @@
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 48px;
+  }
+  
+  .tabs-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tabs-trigger {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--color-tertiary);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tabs-trigger:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  .tabs-trigger.active {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  .tabs-content {
+    display: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .tabs-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Card */
+  .card {
+    margin-bottom: 16px;
+  }
+  .card h2 {
+    margin-bottom: 8px;
+  }
+  .card p {
+    margin-bottom: 8px;
+    color: #555;
+  }
+  .card .content {
+    overflow-y: auto;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Estilos de grid para juegos populares */
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+  .game-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+  }
+  .game-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  

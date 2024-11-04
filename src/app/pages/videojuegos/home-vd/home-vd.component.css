@@ -51,7 +51,7 @@ h1 {
       button {
         padding: 10px 20px;
         font-family: Poppins;
-        background-color: #bec9c2;
+        background-color: var(--color-tertiary);
         color: #000;
         border: none;
         border-radius: 5px;
@@ -60,7 +60,7 @@ h1 {
         transition: background-color 0.3s ease;
   
         &:hover {
-          background-color: #98e4ff;
+          background-color: var(--color-secondary);
         }
       }
     }

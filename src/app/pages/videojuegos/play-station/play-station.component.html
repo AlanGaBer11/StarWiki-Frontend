@@ -1,1 +1,61 @@
-<p>play-station works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+  <h1>PlayStation</h1>
+  <br />
+  <br />
+
+  <div class="tabs">
+    <div class="tabs-list">
+        <button class="tabs-trigger active" data-tab="historia" (click)="showHistoria()">
+          Historia
+        </button>
+        <button class="tabs-trigger" data-tab="juegoPopulares" (click)="showJuegosPopulares()">
+          Juegos Populares
+        </button>
+      </div>
+
+      <div class="tabs-content active" id="historia">
+        <div class="card">
+          <h2>Historia de PlayStation</h2>
+          <p>Un vistazo detallado a la evolución de PlayStation</p>
+          <div class="content">
+            <h3>Orígenes de PlayStation</h3>
+            <p>PlayStation surgió en los años 90 cuando Sony colaboró con Nintendo para desarrollar una consola conjunta, pero el proyecto fue abandonado. Como resultado, Sony decidió lanzar su propia consola.</p>
+            <p>En 1994, Sony lanzó la primera PlayStation en Japón. Esta consola revolucionó el mercado al ofrecer gráficos en 3D y una gran cantidad de juegos exclusivos.</p>
+
+            <h3>PlayStation 2: Un Éxito sin Precedentes</h3>
+            <p>Lanzada en 2000, la PlayStation 2 se convirtió en una de las consolas más vendidas de todos los tiempos. Su compatibilidad con DVD y una gran biblioteca de juegos, incluyendo títulos como *Final Fantasy X* y *Gran Turismo 3*, la hicieron inmensamente popular.</p>
+            <p>Esta consola estableció a Sony como líder en el mercado de videojuegos, compitiendo con Nintendo y la recién llegada Xbox de Microsoft.</p>
+
+            <h3>PlayStation 3: Innovación y Retos</h3>
+            <p>En 2006, Sony lanzó la PlayStation 3, con tecnología Blu-ray y gráficos avanzados. Aunque inicialmente enfrentó críticas por su precio, la PS3 ganó popularidad gracias a juegos como *The Last of Us* y *Uncharted*.</p>
+            <p>Además, el servicio en línea de PlayStation Network creció, permitiendo a los usuarios disfrutar de juegos multijugador y contenido digital.</p>
+
+            <h3>PlayStation 4: El Renacer de PlayStation</h3>
+            <p>Lanzada en 2013, la PlayStation 4 se centró en el rendimiento y la experiencia del jugador. Con juegos como *God of War*, *Spider-Man*, y *Horizon Zero Dawn*, la PS4 se consolidó como una consola líder.</p>
+            <p>La PS4 también impulsó la transmisión de juegos con *PlayStation Now* y amplió su ecosistema con la realidad virtual a través de PlayStation VR.</p>
+
+            <h3>PlayStation 5: La Nueva Generación</h3>
+            <p>La PlayStation 5, lanzada en 2020, introdujo gráficos 4K, tiempos de carga ultrarrápidos con su SSD y una nueva experiencia de juego inmersiva con el control DualSense.</p>
+            <p>La PS5 continúa la tradición de Sony de ofrecer juegos exclusivos y servicios mejorados, haciendo de la marca PlayStation una de las favoritas entre los jugadores de todo el mundo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs-content" id="juegoPopulares">
+        <div class="card">
+          <h2>Juegos Populares de PlayStation</h2>
+          <p>Algunos de los títulos más destacados en la plataforma PlayStation</p>
+          <div class="games-grid">
+            <div class="game-card" *ngFor="let juegos of juegosPopulares">
+              <img [src]="juegos.imagen" [alt]="juegos.juego">
+              <p>{{ juegos.juego }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <app-footer></app-footer>
+</div>

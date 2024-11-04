@@ -1,1 +1,58 @@
-<p>xbox works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+  <h1>Xbox</h1>
+  <br />
+  <br />
+
+  <div class="tabs">
+    <div class="tabs-list">
+        <button class="tabs-trigger active" data-tab="historia" (click)="showHistoria()">
+          Historia
+        </button>
+        <button class="tabs-trigger" data-tab="juegoPopulares" (click)="showJuegosPopulares()">
+          Juegos Populares
+        </button>
+      </div>
+
+      <div class="tabs-content active" id="historia">
+        <div class="card">
+          <h2>Historia de Xbox</h2>
+          <p>Un vistazo detallado a la evolución de Xbox</p>
+          <div class="content">
+            <h3>Orígenes de Xbox</h3>
+            <p>En 1999, Microsoft comenzó el desarrollo de su primera consola para competir en el mercado de videojuegos. El equipo de Xbox quería traer una experiencia de juego basada en DirectX, la tecnología de gráficos de Microsoft.</p>
+            <p>Xbox debutó en noviembre de 2001, con un procesador Intel y disco duro incorporado, marcando la entrada de Microsoft al mercado de consolas.</p>
+            
+            <h3>Xbox 360: Éxito Global</h3>
+            <p>En 2005, se lanzó Xbox 360 con gráficos avanzados y un enfoque en conectividad en línea. Xbox Live se volvió un punto fuerte, permitiendo a los usuarios jugar en línea y acceder a contenido exclusivo.</p>
+            <p>Con juegos como *Halo 3* y *Gears of War*, la 360 se convirtió en un éxito, aunque enfrentó problemas técnicos como el "anillo rojo de la muerte" (Red Ring of Death), que Microsoft resolvió con una extensión de garantía.</p>
+
+            <h3>Xbox One: Innovación y Críticas</h3>
+            <p>Lanzada en 2013, Xbox One se presentó con el Kinect 2.0 y un enfoque en entretenimiento en el hogar. Aunque al principio hubo críticas por algunas políticas, Microsoft ajustó sus estrategias para adaptarse a las expectativas de los usuarios.</p>
+            <p>La Xbox One introdujo *Game Pass*, una opción de suscripción para juegos, que rápidamente se convirtió en un éxito en la plataforma.</p>
+
+            <h3>Xbox Series X|S: La Nueva Era</h3>
+            <p>En 2020, la Xbox Series X y Series S llegaron con gráficos 4K, ray tracing, y tiempos de carga rápidos. La retrocompatibilidad y servicios como *Game Pass* y *xCloud* expandieron el ecosistema de Xbox.</p>
+            <p>Microsoft se ha enfocado en la accesibilidad y servicios, permitiendo a los jugadores disfrutar de títulos en dispositivos móviles, PC y consolas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs-content" id="juegoPopulares">
+        <div class="card">
+          <h2>Juegos Populares de Xbox</h2>
+          <p>Algunos de los títulos más destacados en la plataforma Xbox</p>
+          <div class="games-grid">
+            <div class="game-card" *ngFor="let juegos of juegosPopulares">
+              <img [src]="juegos.imagen" [alt]="juegos.juego">
+              <p>{{ juegos.juego }}</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <app-footer></app-footer>
+</div>
