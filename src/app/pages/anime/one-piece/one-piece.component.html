@@ -3,21 +3,32 @@
   <div class="content-container">
     <div class="image-container">
       <img
-        src="https://ionicframework.com/docs/img/demos/card-media.png"
+        src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/a249096c7812deb8c3c2c907173f3774.jpg"
         alt="Imagen del juego"
       />
     </div>
     <div class="text-container">
       <h1>One Piece</h1>
       <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-        sequi nesciunt. Neque porro quisquam est, qui dolorem.
+        One Piece es una de las series de anime y manga más queridas y exitosas
+        de todos los tiempos, creada por Eiichiro Oda. La historia sigue las
+        aventuras de Monkey D. Luffy, un joven con el sueño de convertirse en el
+        Rey de los Piratas. Para lograr su objetivo, Luffy reúne una tripulación
+        de valientes piratas mientras navegan por los mares en busca del
+        legendario tesoro conocido como el "One Piece". Esta épica historia está
+        llena de emocionantes batallas, misterios, y profundas lecciones sobre
+        la amistad, la lealtad, y la lucha por los sueños.
       </p>
       <p class="highlight-text">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore.
+        Desde su debut en 1997, One Piece ha capturado la imaginación de
+        millones de fanáticos a nivel mundial. Con más de 1000 episodios en su
+        haber, la serie ha mantenido una popularidad inquebrantable, gracias a
+        sus personajes únicos, historias fascinantes y una trama que se expande
+        con cada arco argumental. Cada miembro de la tripulación de Luffy tiene
+        sus propios sueños y motivaciones, lo que les da una gran profundidad y
+        les convierte en parte esencial del viaje hacia el One Piece. El mundo
+        creado por Oda es vasto y diverso, lo que ha llevado a One Piece a ser
+        más que solo un anime, sino una verdadera cultura en sí misma.
       </p>
     </div>
   </div>
@@ -28,31 +39,16 @@
   <h2 class="subtitle">Personajes</h2>
   <div class="characters-grid">
     <div class="character-card" *ngFor="let op of listOnePiece">
-      <div class="avatar">
+      <!--       <div class="avatar">
         <img [src]="op.image" [alt]="op.name" />
-      </div>
+      </div> -->
       <h3 class="character-name">{{ op.name }}</h3>
-      <p class="character-role">{{ op.age }}</p>
-      <p class="character-role">{{ op.size }}</p>
-      <p class="character-role">{{ op.bounty }}</p>
-      <p class="character-description">{{ op.description }}</p>
+      <p class="character-role"><b>Edad: </b>{{ op.age }}</p>
+      <p class="character-role"><b>Estatura: </b>{{ op.size }}</p>
+      <p class="character-role"><b>Recompensa: </b>{{ op.bounty }} Belly</p>
+      <p class="character-role"><b>Trabajo: </b>{{ op.job }}</p>
+      <p class="character-role"><b>Estado: </b>{{ op.status }}</p>
     </div>
-
-   <!--  <div class="character-card">
-      <div class="avatar">
-        <img
-          src="https://ionicframework.com/docs/img/demos/card-media.png"
-          alt="Personaje 02"
-        />
-      </div>
-      <h3 class="character-name">Personaje 02</h3>
-      <p class="character-role">Astrophysicist</p>
-      <p class="character-description">
-        Brilliant and determined, Dr. Voss leads the mission to save the
-        universe.
-      </p>
-    </div>
-     -->
   </div>
 
   <br />

@@ -25,14 +25,13 @@
         <div>
           <img src="assets/img/st-episodios/7.webp" alt="Episodio VII - El Despertar de la Fuerza" class="poster" />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
-          </p>
+            Décadas después de la caída del Imperio, una nueva amenaza emerge en la forma de la Primera Orden. Rey, una recolectora de chatarra en el planeta Jakku, descubre una conexión con la Fuerza y se ve involucrada en la lucha entre la Resistencia, liderada por la General Leia Organa, y Kylo Ren, un misterioso villano en conflicto con su linaje. Junto a Finn, un ex soldado de asalto, y Han Solo, Rey emprende un viaje para ayudar a la Resistencia y aprender los secretos de su propia identidad, en un conflicto que los llevará a confrontar la oscuridad que amenaza la paz galáctica.          </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 19m</span>
+            <span class="badge"><span class="icon">⭐</span> 4.1/5</span>
           </div>
         </div>
       </div>
@@ -41,10 +40,10 @@
       <h2 class="subtitle">Secuelas</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let lt7 of lineaTiempoEvii">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ lt7.title }}</h3>
+            <p class="timeline-text">{{ lt7.text }}</p>
           </li>
         </ol>
       </div>
@@ -52,28 +51,15 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e7 of personajesEvii">
+          <h3 class="character-name">{{ e7.nombre }}</h3>
+          <p class="character-description">{{ e7.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e7.imagen" [alt]="e7.nombre" />
           </div>
-          <h3 class="character-name">Personaje 01</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 02</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
+
     </div>
 
     <!-- EPISODIO VIII -->
@@ -82,14 +68,13 @@
         <div>
           <img src="assets/img/st-episodios/8.webp" alt="Episodio VIII - Los Últimos Jedi" class="poster" />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
-          </p>
+            La Resistencia se encuentra en una posición vulnerable mientras la Primera Orden los ataca implacablemente. Rey localiza a Luke Skywalker en un planeta remoto, con la esperanza de que el legendario Jedi la entrene y se una a la causa. Luke, desilusionado y atormentado por errores pasados, duda en regresar a la lucha. Mientras Rey explora su conexión con la Fuerza y lucha con su propio lado oscuro, la Resistencia enfrenta desesperadas batallas por su supervivencia. Esta entrega explora la complejidad de héroes y villanos, revelando que el bien y el mal no son tan claros como parecen.          </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 32m</span>
+            <span class="badge"><span class="icon">⭐</span> 4/5</span>
           </div>
         </div>
       </div>
@@ -98,10 +83,10 @@
       <h2 class="subtitle">Secuelas</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let l78 of lineaTiempoEviii">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ l78.title }}</h3>
+            <p class="timeline-text">{{ l78.text }}</p>
           </li>
         </ol>
       </div>
@@ -109,26 +94,12 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e8 of personajesEviii">
+          <h3 class="character-name">{{ e8.nombre }}</h3>
+          <p class="character-description">{{ e8.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e8.imagen" [alt]="e8.nombre" />
           </div>
-          <h3 class="character-name">Personaje 03</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 04</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
     </div>
@@ -139,14 +110,13 @@
         <div>
           <img src="assets/img/st-episodios/9.webp" alt="Episodio IX - El Ascenso de Skywalker" class="poster" />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
-          </p>
+            Cuando se revela que el Emperador Palpatine ha sobrevivido y prepara un ejército para retomar el poder, Rey y sus aliados deben enfrentarse a una última y desesperada misión. Rey descubre su conexión con el Emperador y se enfrenta a Kylo Ren en una lucha por su alma y el destino de la galaxia. En una serie de épicas batallas finales, la Resistencia y la Primera Orden se enfrentan en un conflicto de proporciones galácticas. Rey debe aceptar su herencia y decidir si abrazará el lado luminoso o el oscuro, en un enfrentamiento que definirá el futuro de todos.          </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 23m</span>
+            <span class="badge"><span class="icon">⭐</span> 3.5/5</span>
           </div>
         </div>
       </div>
@@ -155,10 +125,10 @@
       <h2 class="subtitle">Secuelas</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let lt9 of lineaTiempoEix">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ lt9.title }}</h3>
+            <p class="timeline-text">{{ lt9.text }}</p>
           </li>
         </ol>
       </div>
@@ -166,26 +136,12 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e9 of personajesEix">
+          <h3 class="character-name">{{ e9.nombre }}</h3>
+          <p class="character-description">{{ e9.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e9.imagen" [alt]="e9.nombre" />
           </div>
-          <h3 class="character-name">Personaje 05</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 06</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
     </div>

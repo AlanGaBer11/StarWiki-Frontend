@@ -6,45 +6,69 @@
 
   <div class="tabs">
     <div class="tabs-list">
-      <button class="tabs-trigger active" data-tab="episodioI" (click)="showEpisodioI()">
+      <button
+        class="tabs-trigger active"
+        data-tab="episodioI"
+        (click)="showEpisodioI()"
+      >
         Episodio I - La Amenaza Fantasma
       </button>
-      <button class="tabs-trigger" data-tab="episodioII" (click)="showEpisodioII()">
+      <button
+        class="tabs-trigger"
+        data-tab="episodioII"
+        (click)="showEpisodioII()"
+      >
         Episodio II - El Ataque de los Clones
       </button>
-      <button class="tabs-trigger" data-tab="episodioIII" (click)="showEpisodioIII()">
+      <button
+        class="tabs-trigger"
+        data-tab="episodioIII"
+        (click)="showEpisodioIII()"
+      >
         Episodio III - La Venganza de los Sith
       </button>
     </div>
     <br />
-    
 
     <!-- EPISODIO I -->
     <div class="tabs-content active" id="episodioI">
       <div class="grid">
         <div>
-          <img src="assets/img/st-episodios/1.webp" alt="Episodio I - La Amenaza Fantasma" class="poster" />
+          <img
+            src="assets/img/st-episodios/1.webp"
+            alt="Episodio I - La Amenaza Fantasma"
+            class="poster"
+          />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+            La galaxia vive un periodo de tensión entre la República Galáctica y
+            la Federación de Comercio. Los Jedi Qui-Gon Jinn y su aprendiz,
+            Obi-Wan Kenobi, son enviados a negociar, pero descubren un complot
+            para invadir el pacífico planeta Naboo. Durante su misión, conocen a
+            Anakin Skywalker, un niño con un potencial extraordinario en la
+            Fuerza. Creyendo que Anakin es el Elegido destinado a traer
+            equilibrio a la Fuerza, Qui-Gon lo lleva ante el Consejo Jedi.
+            Mientras tanto, una amenaza oscura emerge en la figura del Darth
+            Maul, un Sith que pondrá a prueba las habilidades de los Jedi y
+            revelará que las fuerzas del mal se están reagrupando.
           </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 17m</span>
+            <span class="badge"><span class="icon">⭐</span> 3.2/5</span>
           </div>
         </div>
       </div>
 
       <!-- Linea del Tiempo -->
-      <h2 class="subtitle">Secuelas</h2>
+      <h2 class="subtitle">Línea del Tiempo</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let lt1 of lineaTiempoEi">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ lt1.title }}</h3>
+            <p class="timeline-text">{{ lt1.text }}</p>
           </li>
         </ol>
       </div>
@@ -52,56 +76,56 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e1 of personajesEi">
+          <h3 class="character-name">{{ e1.nombre }}</h3>
+          <p class="character-description">{{ e1.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e1.imagen" [alt]="e1.nombre" />
           </div>
-          <h3 class="character-name">Personaje 01</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 02</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
+      
     </div>
 
     <!-- EPISODIO II -->
     <div class="tabs-content" id="episodioII">
       <div class="grid">
         <div>
-          <img src="assets/img/st-episodios/2.webp" alt="Episodio II - El Ataque de los Clones" class="poster" />
+          <img
+            src="assets/img/st-episodios/2.webp"
+            alt="Episodio II - El Ataque de los Clones"
+            class="poster"
+          />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+            La República Galáctica se encuentra al borde de una guerra civil.
+            Anakin Skywalker ha crecido y ahora es aprendiz de Obi-Wan Kenobi.
+            Su misión es proteger a la senadora Padmé Amidala, quien ha sido
+            blanco de intentos de asesinato. Mientras Anakin desarrolla un
+            romance prohibido con Padmé, Obi-Wan descubre la creación de un
+            ejército de clones y una conspiración que involucra al Conde Dooku,
+            un antiguo Jedi convertido al lado oscuro. Los clones y los
+            separatistas inician un conflicto masivo que se conocerá como la
+            Guerra de los Clones, cambiando el destino de la galaxia y marcando
+            un punto de no retorno para Anakin.
           </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 23m</span>
+            <span class="badge"><span class="icon">⭐</span> 3.3/5</span>
           </div>
         </div>
       </div>
 
       <!-- Linea del Tiempo -->
-      <h2 class="subtitle">Secuelas</h2>
+      <h2 class="subtitle">Línea del Tiempo</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let lt2 of lineaTiempoEii">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ lt2.title }}</h3>
+            <p class="timeline-text">{{ lt2.text }}</p>
           </li>
         </ol>
       </div>
@@ -109,26 +133,12 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e2 of personajesEii">
+          <h3 class="character-name">{{ e2.nombre }}</h3>
+          <p class="character-description">{{ e2.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e2.imagen" [alt]="e2.nombre" />
           </div>
-          <h3 class="character-name">Personaje 03</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 04</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
     </div>
@@ -137,28 +147,40 @@
     <div class="tabs-content" id="episodioIII">
       <div class="grid">
         <div>
-          <img src="assets/img/st-episodios/3.webp" alt="Episodio III - La Venganza de los Sith" class="poster" />
+          <img
+            src="assets/img/st-episodios/3.webp"
+            alt="Episodio III - La Venganza de los Sith"
+            class="poster"
+          />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+            La Guerra de los Clones está en su punto álgido, y Anakin Skywalker,
+            ya un poderoso Jedi, sufre de visiones sobre la muerte de su esposa,
+            Padmé. Manipulado por el Canciller Palpatine, quien en realidad es
+            el oscuro Darth Sidious, Anakin cae en el lado oscuro con la promesa
+            de salvar a Padmé. Adoptando el nombre de Darth Vader, traiciona a
+            sus antiguos amigos y lleva a cabo una purga contra los Jedi.
+            Obi-Wan Kenobi, destrozado por la traición de su aprendiz, lo
+            confronta en un duelo épico que definirá sus destinos y marcará el
+            comienzo del imperio oscuro.
           </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 21m</span>
+            <span class="badge"><span class="icon">⭐</span> 4.1/5</span>
           </div>
         </div>
       </div>
 
       <!-- Linea del Tiempo -->
-      <h2 class="subtitle">Secuelas</h2>
+      <h2 class="subtitle">Línea del Tiempo</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let lt3 of lineaTiempoEiii">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ lt3.title }}</h3>
+            <p class="timeline-text">{{ lt3.text }}</p>
           </li>
         </ol>
       </div>
@@ -166,30 +188,17 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e3 of personajesEiii">
+          <h3 class="character-name">{{ e3.nombre }}</h3>
+          <p class="character-description">{{ e3.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e3.imagen" [alt]="e3.nombre" />
           </div>
-          <h3 class="character-name">Personaje 05</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 06</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
     </div>
     <br />
+    <br />
+    <app-footer></app-footer>
   </div>
-  <app-footer></app-footer>
 </div>

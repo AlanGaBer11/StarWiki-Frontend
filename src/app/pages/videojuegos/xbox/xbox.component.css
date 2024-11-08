@@ -65,7 +65,7 @@ h1 {
 /* Estilos de grid para juegos populares */
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
 }
 .game-card {
@@ -76,7 +76,8 @@ h1 {
 }
 .game-card img {
   width: 100%;
-  height: 100px;
+  height: 180px;
+  max-width: 600px;
   object-fit: cover;
   border-radius: 4px;
 }

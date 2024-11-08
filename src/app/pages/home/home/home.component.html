@@ -22,6 +22,9 @@
       [ngClass]="card.class"
       [routerLink]="card.link"
     >
+      <video class="video-background" loop muted autoplay>
+        <source [src]="card.videoLink" />
+      </video>
       <div class="card-content">{{ card.titulo }}</div>
     </div>
   </div>
@@ -33,27 +36,30 @@
 
   <div class="articulo-container">
     <div class="articulo-texto">
-      <h2>Artículo Destacado</h2>
+      <h2>
+        El origen de los Jedi: Un análisis sobre los primeros Jedi en la
+        historia de Star Wars
+      </h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus
-        vulputate metus, placerat vulputate erat sagittis nec. In nec nisi nibh.
-        Sed vel fringilla mauris. Maecenas pharetra sem ut ante dapibus, in
-        gravida lacus blandit. Mauris ornare magna molestie ipsum finibus, non
-        auctor purus mollis. Ut feugiat, nisl at dapibus molestie, nulla ex
-        volutpat tortor, in dignissim massa nunc efficitur dolor. Proin
-        tristique nisi erat, id sagittis magna blandit ut. Phasellus nec ante
-        posuere, consequat eros laoreet, malesuada dui.
+        Los Jedi tienen raíces profundas en la historia de Star Wars, comenzando
+        como los Je'daii en el planeta Tython. Los primeros Jedi fueron los
+        guardianes de la Fuerza, aprendiendo a equilibrar sus dos aspectos: el
+        luminoso y el oscuro. Con el tiempo, esta orden se separó de los Sith,
+        quienes abrazaron el lado oscuro. Los Jedi adoptaron un código riguroso
+        de paz, sabiduría y autocontrol, convirtiéndose en protectores de la
+        galaxia. Su legado perdura a través de los siglos, simbolizando la lucha
+        entre el bien y el mal.
       </p>
-      
-      <button class="featured-button">Lee el artículo destacado</button>
+      <!-- <button class="featured-button">Lee el artículo destacado</button> -->
     </div>
     <div class="articulo-imagen">
       <img
-        src="https://ionicframework.com/docs/img/demos/card-media.png"
-        alt="Artículo destacado"
+        src="https://verbalusmater.com/storage/2022/03/hipertextual-alta-republica-siguiente-aventura-narrativa-star-wars-tras-saga-skywalker-2020556754-scaled-1.png"
+        alt="El Origen de los Jedi"
       />
     </div>
   </div>
+
   <br />
   <br />
 

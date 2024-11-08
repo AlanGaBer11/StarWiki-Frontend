@@ -7,36 +7,24 @@
       <h1>Star Wars</h1>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus
-        vulputate metus, placerat vulputate erat sagittis nec. In nec nisi nibh.
-        Sed vel fringilla mauris. Maecenas pharetra sem ut ante dapibus, in
-        gravida lacus blandit. Mauris ornare magna molestie ipsum finibus, non
-        auctor purus mollis. Ut feugiat, nisl at dapibus molestie, nulla ex
-        volutpat tortor, in dignissim massa nunc efficitur dolor. Proin
-        tristique nisi erat, id sagittis magna blandit ut. Phasellus nec ante
-        posuere, consequat eros laoreet, malesuada dui.
+        Star Wars es una de las sagas cinematográficas más icónicas de todos los
+        tiempos, creada por George Lucas. Con historias que abarcan
+        generaciones, esta serie de películas explora la lucha entre el bien y
+        el mal, la familia y el destino, en un universo lleno de planetas
+        exóticos, especies alienígenas, y la misteriosa Fuerza que conecta a
+        todas las criaturas. Desde la caída de la República hasta el ascenso del
+        Imperio y la resistencia de los Jedi, Star Wars continúa cautivando a
+        millones de fans alrededor del mundo.
       </p>
 
+      <!-- Películas -->
       <div class="cards-pelis">
-        <img src="assets/img/st-episodios/1.webp" />
-        <img src="assets/img/st-episodios/2.webp" />
-        <img src="assets/img/st-episodios/3.webp" />
-      </div>
-
-      <br />
-
-      <div class="cards-pelis">
-        <img src="assets/img/st-episodios/4.webp" />
-        <img src="assets/img/st-episodios/5.webp" />
-        <img src="assets/img/st-episodios/6.webp" />
-      </div>
-
-      <br />
-
-      <div class="cards-pelis">
-        <img src="assets/img/st-episodios/7.webp" />
-        <img src="assets/img/st-episodios/8.webp" />
-        <img src="assets/img/st-episodios/9.webp" />
+        <img
+          *ngFor="let pelicula of peliculas"
+          [src]="pelicula.imageUrl"
+          [alt]="pelicula.title"
+          (click)="selectPelicula(pelicula)"
+        />
       </div>
 
       <br />
@@ -46,53 +34,36 @@
     <div class="content-right">
       <img
         class="main-image"
-        src="assets/img/st-episodios/1.webp"
-        alt="Imagen"
+        [src]="selectedPelicula.imageUrl"
+        [alt]="selectedPelicula.title"
       />
       <div class="descripcion">
-        <h3>Star Wars Episodio I - La amenaza Fantasma</h3>
-        <p>
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-          sequi nesciunt.
-        </p>
-        <button>Lee más</button>
-        <!-- !PONER ROUTERLINK QUE REDIRIGA A SU RESPECTIVA PELÍCULA -->
+        <h3>{{ selectedPelicula.title }}</h3>
+        <p>{{ selectedPelicula.description }}</p>
+        <button [routerLink]="selectedPelicula.route">Lee más</button>
       </div>
     </div>
   </div>
 
-  
   <!-- PERSONAJES -->
   <h2>Personajes</h2>
   <div class="characters-grid">
-    <div class="character-card">
-      <div class="avatar">
-        <img
-          src="https://ionicframework.com/docs/img/demos/card-media.png"
-          alt="Personaje 01"
-        />
-      </div>
-      <h3 class="character-name">Personaje 01</h3>
-      <p class="character-role">Astrophysicist</p>
-      <p class="character-description">
-        Brilliant and determined, Dr. Voss leads the mission to save the
-        universe.
+    <div class="character-card" *ngFor="let personajes of listPersonajes">
+      <h3 class="character-name">{{ personajes.name }}</h3>
+      <p class="character-role">
+        <b>Año de Nacimiento:</b> {{ personajes.birth_year }}
       </p>
-    </div>
-
-    <div class="character-card">
-      <div class="avatar">
-        <img
-          src="https://ionicframework.com/docs/img/demos/card-media.png"
-          alt="Personaje 02"
-        />
-      </div>
-      <h3 class="character-name">Personaje 02</h3>
-      <p class="character-role">Astrophysicist</p>
-      <p class="character-description">
-        Brilliant and determined, Dr. Voss leads the mission to save the
-        universe.
+      <p class="character-role"><b>Estatura:</b> {{ personajes.height }} cm</p>
+      <p class="character-role"><b>Peso:</b> {{ personajes.mass }} kg</p>
+      <p class="character-role"><b>Género:</b> {{ personajes.gender }}</p>
+      <p class="character-role">
+        <b>Color de Piel:</b> {{ personajes.skin_color }}
+      </p>
+      <p class="character-role">
+        <b>Color de Cabello:</b> {{ personajes.hair_color }}
+      </p>
+      <p class="character-role">
+        <b>Color de Ojos:</b> {{ personajes.eye_color }}
       </p>
     </div>
   </div>

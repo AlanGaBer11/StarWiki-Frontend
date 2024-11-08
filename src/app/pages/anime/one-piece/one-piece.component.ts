@@ -16,7 +16,7 @@ export class OnePieceComponent {
   }
 
   CargaData() {
-    this.rest.get('http://localhost:3030/api/v1/onepiece').subscribe((resultado: any) => {
+    this.rest.get('https://starwikibackend-dbg8hkhzf3cad2h3.eastus2-01.azurewebsites.net/api/v1/onepiece').subscribe((resultado: any) => {
       console.log(resultado);
       this.listOnePiece = resultado;
     }, (error) => {

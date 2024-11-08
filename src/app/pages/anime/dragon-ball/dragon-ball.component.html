@@ -3,55 +3,35 @@
   <div class="content-container">
     <div class="image-container">
       <img
-        src="https://ionicframework.com/docs/img/demos/card-media.png"
+        src="https://imagenes.multimediostv.com/files/main_image/uploads/2020/02/19/64f2f5f2a9105.jpeg"
         alt="Imagen del juego"
       />
     </div>
     <div class="text-container">
       <h1>Dragon Ball</h1>
       <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-        sequi nesciunt. Neque porro quisquam est, qui dolorem.
+        Dragon Ball es una de las franquicias de anime y manga más populares y trascendentales de la historia. Creada por Akira Toriyama en 1984, esta serie ha cautivado a generaciones de fanáticos en todo el mundo con sus intensas batallas, personajes entrañables, y una narrativa que mezcla aventura, comedia, y acción. La historia sigue las aventuras de Goku, un joven con una fuerza sobrehumana que busca las legendarias Esferas del Dragón, las cuales tienen el poder de conceder cualquier deseo.
       </p>
       <p class="highlight-text">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore.
+        A lo largo de los años, Dragon Ball ha dado lugar a múltiples series, películas, videojuegos y merchandising, convirtiéndose en un fenómeno cultural global. La saga ha evolucionado a través de diferentes etapas, como Dragon Ball Z, donde se exploran los combates épicos contra poderosos enemigos, y Dragon Ball Super, que continúa la historia con nuevas amenazas y transformaciones más poderosas. La serie es famosa por sus icónicas peleas, las cuales han definido el género de acción en el anime.
       </p>
     </div>
   </div>
-  <br />
-  <br />
+
 
   <!-- PERSONAJES -->
   <h2 class="subtitle">Personajes</h2>
   <div class="characters-grid">
-    
     <div class="character-card" *ngFor="let db of listDragonBall">
+      <h3 class="character-name">{{ db.name }}</h3>
+      <p class="character-role">{{ db.race }} - {{ db.gender }}</p>
+      <p class="character-role"><b>KI Base:</b> <br>{{ db.ki }}</p>
+      <p class="character-role"><b>KI Total:</b> <br>{{ db.maxKi }}</p>
+      <p class="character-role"><b>Asociación:</b> <br>{{ db.affiliation }}</p>
       <div class="avatar">
         <img [src]="db.image" [alt]="db.name" />
       </div>
-      <h3 class="character-name">{{ db.name }}</h3>
-      <p class="character-role">{{ db.ki }}</p>
-      <p class="character-description">{{ db.description }}</p>
     </div>
- 
-<!--     <div class="character-card">
-      <div class="avatar">
-        <img
-          src="https://ionicframework.com/docs/img/demos/card-media.png"
-          alt="Personaje 02"
-        />
-      </div>
-      <h3 class="character-name">Personaje 02</h3>
-      <p class="character-role">Astrophysicist</p>
-      <p class="character-description">
-        Brilliant and determined, Dr. Voss leads the mission to save the
-        universe.
-      </p>
-    </div> -->
-    
   </div>
 
   <br />

@@ -6,45 +6,71 @@
 
   <div class="tabs">
     <div class="tabs-list">
-      <button class="tabs-trigger active" data-tab="episodioIV" (click)="showEpisodioIV()">
+      <button
+        class="tabs-trigger active"
+        data-tab="episodioIV"
+        (click)="showEpisodioIV()"
+      >
         Episodio IV - Una Nueva Esperanza
       </button>
-      <button class="tabs-trigger" data-tab="episodioV" (click)="showEpisodioV()">
+      <button
+        class="tabs-trigger"
+        data-tab="episodioV"
+        (click)="showEpisodioV()"
+      >
         Episodio V - El Imperio Contraataca
       </button>
-      <button class="tabs-trigger" data-tab="episodioVI" (click)="showEpisodioVI()">
+      <button
+        class="tabs-trigger"
+        data-tab="episodioVI"
+        (click)="showEpisodioVI()"
+      >
         Episodio VI - El Regreso del Jedi
       </button>
     </div>
     <br />
-    
 
     <!-- EPISODIO IV -->
     <div class="tabs-content active" id="episodioIV">
       <div class="grid">
         <div>
-          <img src="assets/img/st-episodios/4.webp" alt="Episodio IV - Una Nueva Esperanza" class="poster" />
+          <img
+            src="assets/img/st-episodios/4.webp"
+            alt="Episodio IV - Una Nueva Esperanza"
+            class="poster"
+          />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+            En una galaxia gobernada por el despiadado Imperio Galáctico, la
+            princesa Leia Organa, líder de la Alianza Rebelde, roba los planos
+            de la Estrella de la Muerte, una superarma capaz de destruir
+            planetas enteros. Capturada por el siniestro Darth Vader, Leia logra
+            enviar un mensaje de auxilio a través del droide R2-D2. Este llega a
+            Luke Skywalker, un joven granjero que, al descubrir el mensaje, se
+            une a Obi-Wan Kenobi, un veterano Jedi que había permanecido en el
+            exilio. Junto a aliados como Han Solo y Chewbacca, Luke emprende un
+            viaje para rescatar a la princesa y unirse a la lucha contra el
+            Imperio. Enfrentándose a poderosos enemigos, Luke descubre su propio
+            potencial como Jedi y se embarca en un camino que lo llevará a
+            confrontar a las fuerzas oscuras en la galaxia.
           </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 5m</span>
+            <span class="badge"><span class="icon">⭐</span> 4.5/5</span>
           </div>
         </div>
       </div>
 
       <!-- Linea del Tiempo -->
-      <h2 class="subtitle">Secuelas</h2>
+      <h2 class="subtitle">Línea del Tiempo</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let lt4 of lineaTiempoEiv">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ lt4.title }}</h3>
+            <p class="timeline-text">{{ lt4.text }}</p>
           </li>
         </ol>
       </div>
@@ -52,26 +78,12 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e4 of personajesEiv">
+          <h3 class="character-name">{{ e4.nombre }}</h3>
+          <p class="character-description">{{ e4.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e4.imagen" [alt]="e4.nombre" />
           </div>
-          <h3 class="character-name">Personaje 01</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 02</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
     </div>
@@ -80,28 +92,42 @@
     <div class="tabs-content" id="episodioV">
       <div class="grid">
         <div>
-          <img src="assets/img/st-episodios/5.webp" alt="Episodio V - El Imperio Contraataca" class="poster" />
+          <img
+            src="assets/img/st-episodios/5.webp"
+            alt="Episodio V - El Imperio Contraataca"
+            class="poster"
+          />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+            Tras el éxito de la Rebelión al destruir la Estrella de la Muerte,
+            las fuerzas del Imperio, lideradas por Darth Vader, buscan eliminar
+            a los Rebeldes. El grupo se refugia en el planeta helado Hoth, pero
+            es atacado por el Imperio y se ve obligado a huir. Luke Skywalker
+            viaja a Dagobah, donde busca al legendario Maestro Yoda para
+            entrenarse como Jedi. Mientras tanto, Leia, Han, y Chewbacca son
+            perseguidos por Vader y encuentran refugio en la Ciudad de las
+            Nubes, donde son traicionados por Lando Calrissian. Enfrentándose a
+            Vader, Luke descubre un impactante secreto sobre su familia que
+            cambiará su vida para siempre y pondrá a prueba su destino como
+            Jedi.
           </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 8m</span>
+            <span class="badge"><span class="icon">⭐</span> 4.7/5</span>
           </div>
         </div>
       </div>
 
       <!-- Linea del Tiempo -->
-      <h2 class="subtitle">Secuelas</h2>
+      <h2 class="subtitle">Línea del Tiempo</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let lt5 of lineaTiempoEv">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ lt5.title }}</h3>
+            <p class="timeline-text">{{ lt5.text }}</p>
           </li>
         </ol>
       </div>
@@ -109,26 +135,12 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e5 of personajesEv">
+          <h3 class="character-name">{{ e5.nombre }}</h3>
+          <p class="character-description">{{ e5.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e5.imagen" [alt]="e5.nombre" />
           </div>
-          <h3 class="character-name">Personaje 03</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 04</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
     </div>
@@ -137,28 +149,41 @@
     <div class="tabs-content" id="episodioVI">
       <div class="grid">
         <div>
-          <img src="assets/img/st-episodios/6.webp" alt="Episodio VI - El Regreso del Jedi" class="poster" />
+          <img
+            src="assets/img/st-episodios/6.webp"
+            alt="Episodio VI - El Regreso del Jedi"
+            class="poster"
+          />
         </div>
-        <div>
+        <div class="text-container">
           <h2 class="subtitle">Sinopsis</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quo ea iure consequatur. Ea, odio et dolor praesentium nobis placeat ullam fugit cum tempore nam consequuntur qui mollitia perspiciatis. Similique.
+            La Alianza Rebelde lanza una última ofensiva para destruir la
+            segunda Estrella de la Muerte y poner fin al Imperio. Luke Skywalker
+            se ha convertido en un Jedi y, junto a Leia y sus amigos, planea
+            rescatar a Han Solo de las garras del criminal Jabba el Hutt.
+            Mientras la Rebelión enfrenta las defensas imperiales en Endor, Luke
+            decide confrontar a Darth Vader con la esperanza de redimirlo y
+            destruir al Emperador. En un intenso enfrentamiento final, padre e
+            hijo se enfrentan en una batalla donde el destino de la galaxia
+            pende de un hilo. La valentía de Luke y sus aliados será fundamental
+            para poner fin al reinado del mal y restaurar la paz.
           </p>
           <div class="badges">
-            <span class="badge"><span class="icon">⏱</span> 2h 16m</span>
-            <span class="badge"><span class="icon">⭐</span> 4.8/5</span>
+            <span class="badge"><span class="icon">⏱</span> 2h 15m</span>
+            <span class="badge"><span class="icon">⭐</span> 4.2/5</span>
           </div>
         </div>
       </div>
 
       <!-- Linea del Tiempo -->
-      <h2 class="subtitle">Secuelas</h2>
+      <h2 class="subtitle">Línea del Tiempo</h2>
       <div class="scroll-area">
         <ol class="timeline">
-          <li class="timeline-item" *ngFor="let lt of lineaTiempo">
+          <li class="timeline-item" *ngFor="let lt6 of lineaTiempoEvi">
             <div class="dot"></div>
-            <h3 class="timeline-title">{{ lt.pelicula }}</h3>
-            <p class="timeline-text">{{ lt.descripcion }}</p>
+            <h3 class="timeline-title">{{ lt6.title }}</h3>
+            <p class="timeline-text">{{ lt6.text }}</p>
           </li>
         </ol>
       </div>
@@ -166,26 +191,12 @@
       <!-- Personajes Principales -->
       <h2 class="subtitle">Personajes Principales</h2>
       <div class="characters-grid">
-        <div class="character-card">
+        <div class="character-card" *ngFor="let e6 of personajesEvi">
+          <h3 class="character-name">{{ e6.nombre }}</h3>
+          <p class="character-description">{{ e6.descripcion }}</p>
           <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 01" />
+            <img [src]="e6.imagen" [alt]="e6.nombre" />
           </div>
-          <h3 class="character-name">Personaje 05</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
-        </div>
-
-        <div class="character-card">
-          <div class="avatar">
-            <img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Personaje 02" />
-          </div>
-          <h3 class="character-name">Personaje 06</h3>
-          <p class="character-role">Astrophysicist</p>
-          <p class="character-description">
-            Brilliant and determined, Dr. Voss leads the mission to save the universe.
-          </p>
         </div>
       </div>
     </div>
