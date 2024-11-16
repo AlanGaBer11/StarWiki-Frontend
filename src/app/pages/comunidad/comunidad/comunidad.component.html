@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="comunidad-container">
+    <div class="text-section">
+      <h1>Bienvenidos a nuestro Comunidad</h1>
+      <p>
+        Nos gustaría que esta comunidad sea un espacio <b> vivo y dinámico</b>,
+        donde cada aficionado pueda participar.
+        <b
+          >Cualquier usuario puede agregar contenido relacionado con Star Wars,
+          videojuegos y anime</b
+        >. Ya sea a través de comentarios, artículos invitados o compartiendo
+        sus propias experiencias, ¡tu voz es importante para nosotros!
+      </p>
+      <p>
+        Si tienes una opinión, un análisis o alguna historia que te gustaría
+        compartir, no dudes en compartirlo. Creemos que la diversidad de
+        perspectivas enriquece nuestras discusiones y nos ayuda a crear un
+        ambiente más inclusivo y emocionante para todos los fans.
+        <br />Te invitamos a unirte a la conversación y a contribuir con tus
+        ideas y pasiones.
+        <b
+          >¡Esperamos leer tus aportes y construir juntos una comunidad
+          vibrante!</b
+        >
+      </p>
+    </div>
+
+    <button popovertarget="modal" class="agregar">Agregar</button>
+    <!-- MODAL PARA AGREGAR UNA COMUNIDAD -->
+    <div id="modal" popover>
+      <div class="card">
+        <div class="card-header">
+          <h2>Agregar</h2>
+          <mat-icon fontIcon="close"></mat-icon>
+        </div>
+        <div class="card-content">
+          <form id="formulario">
+            <div class="form-group">
+              <label for="tema">Tema</label>
+              <input
+                type="text"
+                id="tema"
+                name="tema"
+                placeholder="Ingrese el tema"
+              />
+            </div>
+            <div class="form-group">
+              <label for="contenido">Contenido</label>
+              <textarea
+                id="contenido"
+                name="contenido"
+                placeholder="Ingrese el contenido"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" />
+            </div>
+            <div class="form-group">
+              <label for="nombre_usuario">Nombre</label>
+              <input
+                type="text"
+                id="nombre_usuario"
+                name="nombre_usuario"
+                placeholder="Ingrese tu nombre"
+              />
+            </div>
+            <div class="form-group">
+              <label for="categoria">Categoría</label>
+              <select id="categoria" name="categoria">
+                <option value="" disabled selected>
+                  Seleccione una categoría
+                </option>
+                <option value="Star Wars">Star Wars</option>
+                <option value="Videojuegos">Videojuegos</option>
+                <option value="Anime">Anime</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn" type="button">
+            Cancelar
+          </button>
+          <button class="btn" type="submit">
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <app-footer></app-footer>
+  </div>
+</div>

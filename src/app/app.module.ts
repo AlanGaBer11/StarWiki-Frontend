@@ -40,6 +40,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { TrilogiaPrecuelasComponent } from './pages/starwars/trilogia-precuelas/trilogia-precuelas.component';
 import { TrilogiaSecuelasComponent } from './pages/starwars/trilogia-secuelas/trilogia-secuelas.component';
 import { TrilogiaOriginalComponent } from './pages/starwars/trilogia-original/trilogia-original.component';
+import { ComunidadComponent } from './pages/comunidad/comunidad/comunidad.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { TrilogiaOriginalComponent } from './pages/starwars/trilogia-original/tr
     HomeANComponent,
     TrilogiaPrecuelasComponent,
     TrilogiaSecuelasComponent,
-    TrilogiaOriginalComponent
+    TrilogiaOriginalComponent,
+    ComunidadComponent
   ],
   imports: [
     BrowserModule,

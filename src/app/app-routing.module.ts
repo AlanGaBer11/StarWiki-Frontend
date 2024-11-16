@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home/home.component';
+import { ComunidadComponent } from './pages/comunidad/comunidad/comunidad.component';
 /* STAR WARS */
 import { HomeSTComponent } from './pages/starwars/home-st/home-st.component';
 import { TrilogiaPrecuelasComponent } from './pages/starwars/trilogia-precuelas/trilogia-precuelas.component';
@@ -18,6 +19,7 @@ import { OnePieceComponent } from './pages/anime/one-piece/one-piece.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
+  { path: 'comunidad', component: ComunidadComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
 
   /* STAR WARS */

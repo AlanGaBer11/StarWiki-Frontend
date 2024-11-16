@@ -1,4 +1,4 @@
-<nav>
+<nav class="menu">
   <img routerLink="/inicio" src="assets/img/logo2.png" />
   <h1 routerLink="/inicio">StarWiki</h1>
   <ul class="links">
@@ -76,3 +76,83 @@
     <li><a class="titulo" routerLink="/comunidad">Comunidad</a></li>
   </ul>
 </nav>
+
+<!-- MÓVIL -->
+<div class="menu-mobile">
+  <!-- Header bar -->
+  <div class="header-bar">
+    <div class="logo-container">
+      <img src="assets/img/logo2.png" alt="StarWiki" class="logo">
+      <h1 class="title" routerLink="/inicio">StarWiki</h1>
+    </div>
+    <button (click)="toggleMenu()" class="menu-button">
+      <i class="menu-icon" [class.open]="isOpen">
+        {{ isOpen ? 'x' : '☰' }}
+      </i>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" *ngIf="isOpen">
+    <ul class="menu-list">
+      <li class="menu-item">
+        <a class="menu-link" routerLink="/inicio">Inicio</a>
+      </li>
+      
+      <!-- Star Wars section -->
+      <li class="menu-item">
+        <button (click)="toggleSubmenu('starWars')" class="submenu-button">
+          <span>Star Wars</span>
+          <span class="arrow" [class.rotated]="isSubmenuOpen('starWars')">▼</span>
+        </button>
+        
+        <ul class="submenu" *ngIf="isSubmenuOpen('starWars')">
+          <li><a class="submenu-link" routerLink="/cronologia">Cronología</a></li>
+          <li>
+            <button (click)="toggleSubmenu('trilogias')" class="submenu-button">
+              <span>Trilogías</span>
+              <span class="arrow" [class.rotated]="isSubmenuOpen('trilogias')">▼</span>
+            </button>
+            
+            <ul class="nested-submenu" *ngIf="isSubmenuOpen('trilogias')">
+              <li><a class="submenu-link" routerLink="/trilogia_precuelas">Trilogía de Precuelas</a></li>
+              <li><a class="submenu-link" routerLink="/trilogia_original">Trilogía Original</a></li>
+              <li><a class="submenu-link" routerLink="/trilogia_secuelas">Trilogía de Secuelas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Videojuegos section -->
+      <li class="menu-item">
+        <button (click)="toggleSubmenu('videojuegos')" class="submenu-button">
+          <span routerLink="/videojuegos">Videojuegos</span>
+          <span class="arrow" [class.rotated]="isSubmenuOpen('videojuegos')">▼</span>
+        </button>
+        
+        <ul class="submenu" *ngIf="isSubmenuOpen('videojuegos')">
+          <li><a class="submenu-link" routerLink="/xbox">Xbox</a></li>
+          <li><a class="submenu-link" routerLink="/play_station">PlayStation</a></li>
+          <li><a class="submenu-link" routerLink="/nintendo">Nintendo</a></li>
+        </ul>
+      </li>
+
+      <!-- Anime section -->
+      <li class="menu-item">
+        <button (click)="toggleSubmenu('anime')" class="submenu-button">
+          <span routerLink="/anime">Anime</span>
+          <span class="arrow" [class.rotated]="isSubmenuOpen('anime')">▼</span>
+        </button>
+        
+        <ul class="submenu" *ngIf="isSubmenuOpen('anime')">
+          <li><a class="submenu-link" routerLink="/dragon_ball">Dragon Ball</a></li>
+          <li><a class="submenu-link" routerLink="/one_piece">One Piece</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-item">
+        <a class="menu-link" routerLink="/comunidad">Comunidad</a>
+      </li>
+    </ul>
+  </nav>
+</div>

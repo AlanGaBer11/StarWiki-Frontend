@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 20px;
   border-top: 1px solid #000000;
 
@@ -37,7 +37,6 @@
       cursor: pointer;
 
       h1 {
-
         margin-bottom: 10px;
       }
 
@@ -60,6 +59,36 @@
       border-radius: 50%;
       margin: 0 5px;
       display: inline-block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 10px;
+
+    .footer-content {
+      flex-direction: column; /* Organiza los elementos en una columna vertical */
+      align-items: center;
+
+      .footer-column {
+        text-align: center; /* Centra el contenido de cada columna */
+        
+        ul {
+          list-style-type: none;
+        }
+      }
+
+      .footer-logo img {
+        width: 60%; /* Ajusta el tamaño del logo para dispositivos pequeños */
+      }
+    }
+
+    .footer-icons {
+      .icon {
+        width: 20px;
+        height: 20px; /* Ajusta aún más los íconos para pantallas pequeñas */
+      }
     }
   }
 }

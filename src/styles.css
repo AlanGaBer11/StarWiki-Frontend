@@ -35,10 +35,15 @@
   font-style: normal;
 }
 
+:root {
+  --color-primary: #094753;
+  --color-secondary: #7f999d;
+  --color-tertiary: #eaebed;
+}
+
 html,
 body {
-  height: 100%;
-  background: #FFFFFF;
+  background: #fff;
   scroll-behavior: smooth;
   font-family: Poppins;
 
@@ -68,18 +73,10 @@ body {
     line-height: 1.5;
     color: #000;
   }
-
-  .container {
-    position: absolute;
-    top: 10%;
-    margin: 30px;
-    padding: 10px 10px none;
-    z-index: 998;
-  }
 }
 
-:root {
-  --color-primary: #094753;
-  --color-secondary: #7F999D;
-  --color-tertiary: #EAEBED;
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }  
 }

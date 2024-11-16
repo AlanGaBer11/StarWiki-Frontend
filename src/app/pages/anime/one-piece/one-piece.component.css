@@ -1,3 +1,11 @@
+.container {
+  position: absolute;
+  top: 10%;
+  margin: 30px;
+  padding: 10px 10px none;
+  z-index: 998;
+}
+
 h1 {
   margin: 0 15px 20px;
   padding: 15px;
@@ -44,12 +52,16 @@ p {
   font-style: italic;
 }
 
+/* Personajes */
 .characters-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+.text {
+  text-align: center;
+}
 .character-card {
   padding: 20px;
   background-color: #ffffff;
@@ -66,10 +78,17 @@ p {
   height: auto;
 }
 
+.avatar img {
+  width: 100%;
+  height: 499px;
+  margin-bottom: 10px;
+}
+
 .character-name {
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .character-role {
@@ -80,15 +99,17 @@ p {
   text-align: center;
 }
 
-.character-description {
-  font-size: 0.9rem;
-  color: #555;
-  text-align: center;
-}
-
 @media (max-width: 768px) {
+  .container {
+    position: relative;
+    top: 0;
+    margin: 10px;
+    padding: 5px;
+    width: 90%;
+  }
+
   .content-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 10px;
   }
 
@@ -101,14 +122,20 @@ p {
   }
 
   .characters-grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(150px, 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .subtitle,
+  .title {
+    text-align: center;
+  }
+  p {
+    margin: 0;
   }
 
   .character-card {
     padding: 15px;
+    height: 45px;
   }
 
   .avatar img {
