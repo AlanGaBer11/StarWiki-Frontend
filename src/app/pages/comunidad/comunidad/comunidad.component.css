@@ -86,6 +86,7 @@ button:hover {
 #ModalC {
   top: 55%; /* Posiciona el modal en el centro vertical */
   left: 50%;
+  height: auto;
 }
 
 .hidden {
