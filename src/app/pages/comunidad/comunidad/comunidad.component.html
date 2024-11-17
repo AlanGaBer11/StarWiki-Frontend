@@ -37,9 +37,8 @@
             <h3 class="card-title">{{ c.tema }}</h3>
             <p class="card-subtitle">{{ c.fecha | date:'fullDate' }}</p>
           </div>
-          <button popovertarget="modalC" (click)="openVerComunidadModal(c)">Ver más</button>
-          <br>
-          <br>
+          <button popovertarget="ModalC" (click)="openVerComunidadModal(c)">Ver más</button>
+
         </div>
       </div>
     </div>
@@ -129,11 +128,10 @@
     <!-- MODAL PARA VER LAS COMUNIDADES -->
 <!-- MODAL PARA VER LAS COMUNIDADES -->
 <div id="ModalC" class="modal-container hidden">
-  <div class="modal-overlay" (click)="closeComunidadModal()"></div>
   <div class="modal-content">
     <div class="card-header">
       <h2>{{ comunidadSeleccionada?.tema }}</h2>
-      <mat-icon fontIcon="close" (click)="closeModal()"></mat-icon>
+      <mat-icon fontIcon="close" (click)="closeComunidadModal()"></mat-icon>
     </div>
     <div class="cards-container" *ngIf="comunidadSeleccionada">
       <p>{{ comunidadSeleccionada.contenido }}</p>
