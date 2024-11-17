@@ -26,19 +26,39 @@
       </p>
     </div>
 
-    <button popovertarget="modal" class="agregar">Agregar</button>
+    <button popovertarget="modal" class="agregar" (click)="openModal()">Agregar</button>
+    <br><br>
+
+    <div class="row">
+      <div class="column" *ngFor="let c of comunidades">
+        <div class="cardC">
+          <img class="img1" [src]="'data:image/jpeg;base64,' + c.imagen" [alt]="c.tema" />
+          <div class="card-headerC">
+            <h3 class="card-title">{{ c.tema }}</h3>
+            <p class="card-subtitle">{{ c.fecha | date:'fullDate' }}</p>
+          </div>
+          <button popovertarget="modalC" (click)="openVerComunidadModal(c)">Ver más</button>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+
     <!-- MODAL PARA AGREGAR UNA COMUNIDAD -->
-    <div id="modal" popover>
+    <div id="modal" popover class="modal-container hidden">
       <div class="card">
         <div class="card-header">
           <h2>Agregar</h2>
-          <mat-icon fontIcon="close"></mat-icon>
+          <mat-icon fontIcon="close" (click)="closeModal()"></mat-icon>
         </div>
         <div class="card-content">
-          <form id="formulario">
+          <form id="formulario" [formGroup]="agComunidad">
             <div class="form-group">
               <label for="tema">Tema</label>
               <input
+              formControlName="tema"
                 type="text"
                 id="tema"
                 name="tema"
@@ -48,18 +68,31 @@
             <div class="form-group">
               <label for="contenido">Contenido</label>
               <textarea
+              formControlName="contenido"
                 id="contenido"
                 name="contenido"
                 placeholder="Ingrese el contenido"
               ></textarea>
             </div>
             <div class="form-group">
+              <label for="imagen">Imagen</label>
+              <input
+                type="file"
+                accept="image/*"
+                id="imagen"
+                name="imagen"
+                class="custom-file-input"
+                (change)="handleFileInput($event)"
+              />
+            </div>
+            <div class="form-group">
               <label for="fecha">Fecha</label>
-              <input type="date" id="fecha" name="fecha" />
+              <input formControlName="fecha" type="date" id="fecha" name="fecha" />
             </div>
             <div class="form-group">
               <label for="nombre_usuario">Nombre</label>
               <input
+              formControlName="nombre_usuario"
                 type="text"
                 id="nombre_usuario"
                 name="nombre_usuario"
@@ -68,7 +101,7 @@
             </div>
             <div class="form-group">
               <label for="categoria">Categoría</label>
-              <select id="categoria" name="categoria">
+              <select id="categoria" name="categoria" formControlName="categoria">
                 <option value="" disabled selected>
                   Seleccione una categoría
                 </option>
@@ -77,27 +110,54 @@
                 <option value="Anime">Anime</option>
               </select>
             </div>
+            <div class="card-footer">
+              <button class="btn" type="button" (click)="closeModal()">
+                Cancelar
+              </button>
+              <button class="btn" type="submit" (click)="createComunidad()" [disabled]="!isFormValid">
+                Enviar
+              </button>
+            </div>
           </form>
         </div>
-        <div class="card-footer">
-          <button class="btn" type="button">
-            Cancelar
-          </button>
-          <button class="btn" type="submit">
-            Enviar
-          </button>
-        </div>
+
+
       </div>
     </div>
+    <!-- FIN MODAL PARA AGREGAR -->
+
+    <!-- MODAL PARA VER LAS COMUNIDADES -->
+<!-- MODAL PARA VER LAS COMUNIDADES -->
+<div id="ModalC" class="modal-container hidden">
+  <div class="modal-overlay" (click)="closeComunidadModal()"></div>
+  <div class="modal-content">
+    <div class="card-header">
+      <h2>{{ comunidadSeleccionada?.tema }}</h2>
+      <mat-icon fontIcon="close" (click)="closeModal()"></mat-icon>
+    </div>
+    <div class="cards-container" *ngIf="comunidadSeleccionada">
+      <p>{{ comunidadSeleccionada.contenido }}</p>
+      <div class="center">
+        <img
+          class="img2"
+          [src]="'data:image/jpeg;base64,' + comunidadSeleccionada.imagen"
+          [alt]="comunidadSeleccionada.tema"
+        />
+        <p><strong>Categoría:</strong> {{ comunidadSeleccionada.categoria }}</p>
+        <p><strong>Fecha:</strong> {{ comunidadSeleccionada.fecha | date: 'fullDate' }}</p>
+        <p><strong>Autor:</strong> {{ comunidadSeleccionada.nombre_usuario }}</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
+
     <br />
     <br />
     <br />
-    <br />
-    <br />
-    <br />
+
     <app-footer></app-footer>
   </div>
 </div>
