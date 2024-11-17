@@ -1,11 +1,10 @@
 /* General */
 .container {
-  position: relative;
+  position: absolute;
   top: 10%;
   margin: 30px;
-  padding: 10px;
+  padding: 10px 10px none;
   z-index: 998;
-  width: 100%;
 }
 
 .agregar {
